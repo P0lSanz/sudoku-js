@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="http://fonts.cdnfonts.com/css/sudoku" rel="stylesheet">
+    <script src="sudoku.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header"></div>
+        <br><br><br>
+        <h1>Sudoku</h1>
+        <div id="explicacio">
+            <p>El sudoku és un joc de lògica que consisteix en omplir una graella de 9x9 caselles amb 
+                nombres del 1 al 9, de manera que cada columna, cada fila i cada regió de 3x3 caselles contingui 
+                un únic nombre d'aquesta llista. Per això, cada casella pot contenir un únic nombre.<br><br>
+                Instruccions: <br>
+                - Tria la dificultat i prem el botó "Partida Nova".<br>
+                - Fes doble click al botó de comprovar per veure l'estat de la partida.<br>
+                - Fent doble click al botó d'Autosolucionar veuràs el resultat final del Sudoku i hauràs perdut la partida.
+            
+            </p>
+        </div>
+        <div id="setup-joc">
+            <div id="diff">
+                <h3>Tria la dificultat </h3>
+                <input id="dif1" type="radio" name="dif" value="facil" checked>
+                <label for="dif1">Facil</label>
+                <input id="dif2" type="radio" name="dif" value="intermig">
+                <label for="dif2">Intermig</label>
+                <input id="dif3" type="radio" name="dif" value="dificil">
+                <label for="dif3">Dificil</label>
+            </div>
+        </div>
+        <br><br>
+        <button id="començar">Partida Nova</button>
+    </header>
+    <div id="espai" class="hidden">
+    <br><br><br>
+    </div>
+    <button id="chequeo" class="hidden">Comprovar</button>
+    <button id="solucion" class="hidden">Autosolucionar</button>
+    <br><br>
+    <div id="guanyar">
+        <h3 id="resultat" class="hidden">Has guanyat!!!</h3>
+    </div>
+    <br><br>
+    <div id="perder">
+    <h3 id="alerta" class="hidden">Has perdut!!</h3>
+    </div>
+    <div id="joc">
+        <div id="taula"></div>
+    </div>
+</body>
+</html>
